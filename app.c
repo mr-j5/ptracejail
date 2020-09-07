@@ -7,7 +7,8 @@ int main(int argc, char ** argv)
     char* path;
     int opt;
     if(argc < 4){
-        
+        printf("Usage:\n ./ptracejail -p [path to restricted file or folder] [path to program] [arg1 for program] [arg2 for program] ... \n");
+        return -1;    
     }
     
     while((opt = getopt(argc, argv, ":p:e:")) != -1){
